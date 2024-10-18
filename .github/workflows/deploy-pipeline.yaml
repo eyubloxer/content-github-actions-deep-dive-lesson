@@ -53,7 +53,7 @@ jobs:
         uses: actions/checkout@v2
       - name: create docs folder
         run: mkdir docs
-      - name: convert md to htlm
+      - name: convert md to html
         uses: docker://pandoc/core:2.0
         with:
           args: userguide.md -t html -o docs/index.html
